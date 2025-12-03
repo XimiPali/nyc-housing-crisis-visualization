@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NYC Housing Crisis Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- MarkerCluster -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+  <!-- Geocoder (Search bar) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Marker Cluster -->
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+  <!-- Heatmap -->
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+  <!-- Search bar -->
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+</head>
+
+<body>
+
+  <!-- UI buttons -->
+  <div id="controls">
+    <button id="toggleHeat">Toggle Heatmap</button>
+    <button id="toggleCluster">Toggle Clusters</button>
+
+    <div class="filter-section">
+      <b>Boroughs:</b><br>
+      <button class="borough-btn" data-boro="MN">Manhattan</button>
+      <button class="borough-btn" data-boro="BK">Brooklyn</button>
+      <button class="borough-btn" data-boro="BX">Bronx</button>
+      <button class="borough-btn" data-boro="QN">Queens</button>
+      <button class="borough-btn" data-boro="SI">Staten Island</button>
+      <button id="showAll">Show All</button>
+    </div>
+  </div>
+
+  <!-- Stats panel -->
+  <div id="statsPanel">
+    <h3>NYC Housing Crisis Summary</h3>
+    <p>Total Cases: <span id="totalCases">0</span></p>
+    <p>Fire Damage: <span id="fireCount">0</span></p>
+    <p>Illegal Occupancy: <span id="illegalCount">0</span></p>
+    <p>Habitability Issues: <span id="habitCount">0</span></p>
+    <p>Entire Building Vacate: <span id="entireCount">0</span></p>
+    <p>Other: <span id="otherCount">0</span></p>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Legend -->
+  <div id="legend">
+    <b>Vacate Reason Legend</b><br>
+    <span style="color:red;">●</span> Fire Damage <br>
+    <span style="color:purple;">●</span> Illegal Occupancy <br>
+    <span style="color:orange;">●</span> Habitability <br>
+    <span style="color:black;">●</span> Entire Building Vacated <br>
+    <span style="color:blue;">●</span> Other <br>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Legend */
+#legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* Controls menu */
+#controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  width: 180px;
+}
+
+#controls button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Stats panel */
+#statsPanel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+#statsPanel h3 {
+  margin-top: 0;
+}
+
+.filter-section {
+  margin-top: 10px;
+}
+
+.borough-btn {
+  margin-top: 5px;
+  width: 100%;
+  cursor: pointer;
+}
