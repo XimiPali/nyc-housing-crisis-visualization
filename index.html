@@ -52,12 +52,33 @@
   <!-- Stats panel -->
   <div id="statsPanel">
     <h3>NYC Housing Crisis Summary</h3>
-    <p>Total Cases: <span id="totalCases">0</span></p>
-    <p>Fire Damage: <span id="fireCount">0</span></p>
-    <p>Illegal Occupancy: <span id="illegalCount">0</span></p>
-    <p>Habitability Issues: <span id="habitCount">0</span></p>
-    <p>Entire Building Vacate: <span id="entireCount">0</span></p>
-    <p>Other: <span id="otherCount">0</span></p>
+    <p>Total Permits Loaded: <span id="totalPermits">0</span></p>
+    <div id="byBorough"><b>By Borough:</b>
+      <ul id="boroughList"></ul>
+    </div>
+    <div id="byPermitType"><b>By Permit Type:</b>
+      <ul id="permitTypeList"></ul>
+    </div>
+    <div id="byJobType"><b>By Job Type:</b>
+      <ul id="jobTypeList"></ul>
+    </div>
+  </div>
+
+  <!-- District-specific panel -->
+  <div id="districtPanel" style="position: absolute; right: 20px; bottom: 20px; width: 300px; background: white; padding: 12px; border-radius:8px; box-shadow: 0 0 10px rgba(0,0,0,0.2); z-index:1000; display:none;">
+    <h4 id="districtTitle">District Summary</h4>
+    <p>Permits in district: <span id="districtTotal">0</span></p>
+    <p>NB (New Building): <span id="districtNB">0</span></p>
+    <p>A1 (Major Alterations): <span id="districtA1">0</span></p>
+    <p>Development Score: <span id="districtScore">0</span></p>
+    <div id="districtBreakdowns">
+      <b>By Permit Type:</b>
+      <ul id="districtPermitTypeList"></ul>
+      <b>By Job Type:</b>
+      <ul id="districtJobTypeList"></ul>
+    </div>
+    <button id="showDistrictOnly">Show Only This District</button>
+    <button id="showAllDistricts">Show All Districts</button>
   </div>
 
   <!-- Map -->
@@ -65,15 +86,29 @@
 
   <!-- Legend -->
   <div id="legend">
-    <b>Vacate Reason Legend</b><br>
-    <span style="color:red;">●</span> Fire Damage <br>
-    <span style="color:purple;">●</span> Illegal Occupancy <br>
-    <span style="color:orange;">●</span> Habitability <br>
-    <span style="color:black;">●</span> Entire Building Vacated <br>
-    <span style="color:blue;">●</span> Other <br>
+    <div><b>Permit Type (marker colors)</b></div>
+    <div class="legend-item"><span class="legend-dot permit-PL"></span>PL – Plumbing</div>
+    <div class="legend-item"><span class="legend-dot permit-EW"></span>EW – Electrical / Excavation</div>
+    <div class="legend-item"><span class="legend-dot permit-NB"></span>NB – New Building (permit)</div>
+    <div class="legend-item"><span class="legend-dot permit-AL"></span>AL – Alteration (permit)</div>
+    <div class="legend-item"><span class="legend-dot permit-FO"></span>FO – Foundation</div>
+    <div class="legend-item"><span class="legend-dot permit-EQ"></span>EQ – Equipment</div>
+    <div class="legend-item"><span class="legend-dot permit-DM"></span style="border:1px solid #999;">DM – Demolition</div>
+    <div class="legend-item"><span class="legend-dot permit-SG"></span>SG – Sign</div>
+    <div class="legend-item"><span class="legend-dot permit-OTHER"></span>Other
+    </div>
+
+    <hr style="margin:8px 0;">
+    <div><b>Job Types (in popups / sidebar)</b></div>
+    <div class="legend-item">A1 – Major Alteration</div>
+    <div class="legend-item">A2 – Moderate Alteration</div>
+    <div class="legend-item">A3 – Minor Alteration</div>
+    <div class="legend-item">NB – New Building</div>
+    <div class="legend-item">DM – Demolition</div>
+    <div class="legend-item">SG – Sign</div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 
 </body>
 </html>

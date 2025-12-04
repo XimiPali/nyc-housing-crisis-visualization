@@ -16,6 +16,21 @@
   z-index: 1000;
 }
 
+/* Legend dots and items */
+.legend-item { margin-bottom: 2px; }
+.legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+.permit-PL { background: #e67e22; }
+.permit-EW { background: #2e86c1; }
+.permit-NB { background: #27ae60; }
+.permit-AL { background: #8e44ad; }
+.permit-FO { background: #c0392b; }
+.permit-EQ { background: #34495e; }
+.permit-DM { background: #ffffff; border: 1px solid #999; }
+.permit-SG { background: #7f5315; }
+.permit-OTHER { background: #7f8c8d; }
+
+#legend hr { margin: 8px 0; border: none; border-top: 1px solid #eee; }
+
 /* Controls menu */
 #controls {
   position: absolute;
