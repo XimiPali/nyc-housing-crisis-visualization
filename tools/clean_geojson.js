@@ -16,7 +16,7 @@ if (argv.length === 0) {
 }
 
 function cleanText(text) {
-  // Replace bare NaN/NAN/Infinity/-Infinity with null
+  // Replacing everything with null 
   let out = text.replace(/\bNaN\b/g, 'null');
   out = out.replace(/\bNAN\b/g, 'null');
   out = out.replace(/\b-Infinity\b/g, 'null');
@@ -31,7 +31,7 @@ function cleanText(text) {
 inputs.forEach(input => {
   try {
     if (!fs.existsSync(input)) {
-      console.warn('Input not found, skipping:', input);
+      console.warn('If input is not found i have to skip for now', input);
       return;
     }
     const raw = fs.readFileSync(input, 'utf8');
@@ -46,11 +46,9 @@ inputs.forEach(input => {
     }
     const outPath = input.replace(/\.geojson$/i, '.cleaned.geojson');
     fs.writeFileSync(outPath, cleaned, 'utf8');
-    console.log('Wrote cleaned file:', outPath);
+    console.log('This is for a clean file, pleaseee workkkkkk:', outPath);
   } catch (err) {
     console.error('Error processing', input, err && err.message ? err.message : err);
   }
 });
 
-console.log('Done. You can now run the NDJSON converter:');
-console.log('  node .\\tools\\geojson_to_ndjson.js');

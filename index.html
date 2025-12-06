@@ -5,10 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Leaflet -->
+  <!-- Leaflet 
+   The source that i start looking at its https://leafletjs.com/reference.html-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <!-- MarkerCluster -->
+  <!-- MarkerCluster 
+  The source that i found this library in a public github repo: https://github.com/Leaflet/Leaflet.markercluster#readme  
+  -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
 
@@ -21,13 +24,25 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- Marker Cluster -->
+  <!-- Marker Cluster 
+   A Leaflet plugin for handling large amounts of markers by clustering them into groups
+  The source that i found this library in a public github repo: https://github.com/Leaflet/Leaflet.markercluster#readme 
+  -->
+
   <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
-  <!-- Heatmap -->
+  <!-- Heatmap 
+   Heatmap Overlay Plugin
+   The source that i found this library which helps a tiny, simple and fast Leaflet plugin for generating heatmaps.
+    https://github.com/Leaflet/Leaflet.heat
+  -->
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
-  <!-- Search bar -->
+  <!-- Search bar 
+  The library source that i found this plugin in a public github repo:
+  https://github.com/perliedman/leaflet-control-geocoder 
+  This is used for a geocoding control for A geocoding control for Leaflet that supports many different geocoding providers..
+  -->
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 </head>
 
@@ -51,7 +66,7 @@
 
   <!-- Stats panel -->
   <div id="statsPanel">
-    <h3>NYC Housing Crisis Summary</h3>
+    <h3>NYC Residential Construction Activity Dashboard</h3>
     <p>Total Permits Loaded: <span id="totalPermits">0</span></p>
     <div id="byBorough"><b>By Borough:</b>
       <ul id="boroughList"></ul>

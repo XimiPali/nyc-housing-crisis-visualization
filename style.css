@@ -1,3 +1,20 @@
+/**
+  Source:
+  OpenAI ChatGPT (Assistance with UI/UX styling and layout decisions)
+
+  What I asked the AI
+
+  I explained that:
+
+    “I’m not very good at CSS, so can you help me style the map, legend, controls, and stats panel so they look organized, readable, and modern?”
+
+  I also asked:
+
+    “How should I position these elements on the screen, and what styles are normally used for panels and overlays in data visualization dashboards?”
+
+  The AI then guided me on layout, positioning, shadows, padding, and color choices.
+  */
+
 #map {
   width: 100%;
   height: 100vh;

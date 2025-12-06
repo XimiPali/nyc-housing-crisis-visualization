@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+/**
+ * 
+ * Ask ChatGPT to help me debug certain syntax or function iam writing wrong specifically 
+ * into NDJSON format, splitting into multiple files.
+ */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -63,8 +69,7 @@ function openNewStream() {
 openNewStream();
 
 function sanitizeFeature(f) {
-  // Basic sanitization: remove NaN/Infinity lurking in numeric values by replacing with null
-  // (Assumes cleaned data; keeps function defensive.)
+  // Basic sanitization: removing NaN/Infinity lurking in numeric values by replacing with null
   const s = JSON.stringify(f, (k, v) => {
     if (typeof v === 'number') {
       if (!isFinite(v)) return null;
@@ -89,6 +94,3 @@ for (let i = 0; i < obj.features.length; i++) {
 }
 
 if (outStream) outStream.end();
-console.log(`Done. Wrote ${written} features into ${fileIndex} file(s) under ${outDir}`);
-console.log('Sample command to inspect first few lines:');
-console.log(`  head -n 5 ${path.join(outDir, 'construction_0.ndjson')}`);
