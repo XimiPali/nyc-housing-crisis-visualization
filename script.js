@@ -118,6 +118,7 @@ function getDistrictDisplay(feature) {
 */
 
 /**
+ * Date: 12/05/2025
  * What I asked the AI (exact type of question):
 
 I asked:
@@ -266,7 +267,7 @@ const MAX_CONSTRUCTION = Infinity;
 let allFeatures = []; // parsed features
 let currentCluster = null;
 let currentHeat = null;
-let currentMarkerLayer = null; // unclustered markers layer
+let currentMarkerLayer = null; // unclustered markers layer for now guys
 let isClusterOn = true;
 let isHeatOn = false;
 
@@ -342,6 +343,8 @@ function createMarkerFromParsed(p, index) {
  */
 
   /**
+   * Data: 12/04/2025
+   * 
    * Source:
     OpenAI ChatGPT (Debugging assistance and logic explanation)
 
@@ -370,7 +373,24 @@ function rebuildLayers(filteredFeatures) {
   // Build structure for each district
   districtsLayer.eachLayer(d => {
     const id = L.stamp(d);  // unique layer ID
-    districtClusters[id] = L.markerClusterGroup();
+    districtClusters[id] = L.markerClusterGroup({
+  iconCreateFunction: function (cluster) {
+    const count = cluster.getChildCount();
+
+    // Iam only modifying these thresholds
+    let sizeClass;
+    if (count < 250) sizeClass = 'small';        //  green
+    else if (count < 400) sizeClass = 'medium';  //  yellow
+    else sizeClass = 'large';                    // orange
+
+    return new L.DivIcon({
+      html: `<div><span>${count}</span></div>`,
+      className: `marker-cluster marker-cluster-${sizeClass}`,
+      iconSize: new L.Point(40, 40)
+    });
+  }
+});
+
     districtMarkerLayers[id] = L.layerGroup();
   });
 
@@ -432,6 +452,7 @@ function rebuildLayers(filteredFeatures) {
 */
 
 /**
+ * Date: 12/04/2025
  * Source:
   OpenAI ChatGPT (Prompt-based debugging assistance)
 

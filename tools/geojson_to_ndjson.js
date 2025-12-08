@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
+ * Data: 12/04/2025
  * 
- * Ask ChatGPT to help me debug certain syntax or function iam writing wrong specifically 
+ * Prompt: Ask ChatGPT to help me debug certain syntax or function iam writing wrong specifically 
  * into NDJSON format, splitting into multiple files.
  */
 
