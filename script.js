@@ -381,7 +381,8 @@ function rebuildLayers(filteredFeatures) {
     let sizeClass;
     if (count < 250) sizeClass = 'small';        //  green
     else if (count < 400) sizeClass = 'medium';  //  yellow
-    else sizeClass = 'large';                    // orange
+    else if (count < 600) sizeClass = 'large';  // orange
+    else sizeClass = 'xlarge';                // red
 
     return new L.DivIcon({
       html: `<div><span>${count}</span></div>`,
