@@ -1,0 +1,18 @@
+# Methodology
+
+  Affordability in New York City has become a topic of contest and despair in the last few years. Many people do not see themselve living in New York City in the long term because it is becoming impossible to find an apartment at a reasonable cost that people could afford. The purpose of this map is to demonstrate the construction development activity in New York City to identidy trends where rent affordability could be improved for New Tork City residents. The map can be split by districts because each district is represented by different a council members in the New York City Council. This distribution could allow users to contact their respective representatives and use this map as a tool to demostrate what is happening and what could improve in their districts in terms of construction, demolition and increase of quality of life. The data analyzed for the creation of this map allows the user to determine the development score for their district, a higher one being a better score, which in turns signifies that their coulcilmember is doing good on its promise to deliver a more affordable housing structure in its district. 
+  
+  There are two datasets analyzed on this map, the first one consists of construction permits granted by The Department of Buildings (DOB) of New York City for alterations and reparations of that include Plumbing, Electrical, Major Renovation and Demolition. The Department of Buildings (DOB) issues permits for construction and demolition activities in the City of New York. The construction industry must submit an application to DOB with details of the construction job they would like to complete. The primary types of application, aka job type, are: New Building, Demolition, and Alterations Type 1, 2, and 3. Each job type can have multiple work types, such as general construction, boiler, elevator, and plumbing. Each work type will receive a separate permit. Each row/record in this dataset represents the life cycle of one permit for one work type. The dataset is updated daily with new records, and each existing record will be updated as the permit application moves through the approval process to reflect the latest status of the application.
+  
+  The second dataset consists of the geographical location of Districts in New York City that allows the map to be split by districts to compare their construction developments. Community Districts (CDs) are mandated by the New York City Charter to review and monitor quality-of-life issues within neighborhoods. New York City is divided into 59 community districts. In addition, the city recognizes 12 Joint Interest Areas (JIAs). JIAs represent major public assets—such as large parks, airports, waterways, and government installations—that are not contained within the boundaries of any community district. Examples include Central Park, Van Cortlandt Park, and LaGuardia and JFK Airports. For data and planning purposes, both CDs and JIAs are assigned a BoroCD value, a unique identifier where the first digit represents the borough code and the following two digits represent the district or JIA number.
+  
+  The data was reduced from the original size with some transformations such as :
+  
+  About x amount of records where analyzed and some of the transformations done were :
+
+# Definitions
+**Add the definitions of the fields as well and the meaning of each reparation and the type of jobs done in the districts**
+
+# Data Sources
+- DOB Permit Issuance via [NYC Open Data](https://data.cityofnewyork.us/Housing-Development/DOB-Permit-Issuance/ipu4-2q9a/about_data)
+- Community Districts and Joint Interest Areas via [NYC PLanning](https://www.nyc.gov/content/planning/pages/resources/datasets/community-districts#overview)
