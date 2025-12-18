@@ -1,4 +1,4 @@
-# Methodology
+# Methodology.
 
 Affordability in New York City has become a topic of contest and despair in the last few years. Many people do not see themselves living in New York City in the long term because it is becoming impossible to find an apartment at a reasonable cost that people could afford. The purpose of this map is to demonstrate the construction development activity in New York City to identify trends where rent affordability could be improved for New Tork City residents. The map can be split by districts because each district is represented by different a council member in the New York City Council. This distribution could allow users to contact their respective representatives and use this map as a tool to demonstrate what is happening and what could improve in their districts in terms of construction, demolition and increase of quality of life. The data analyzed for the creation of this map allows the user to determine the development score for their district, a higher one being a better score, which in turns signifies that their council member is doing good on its promise to deliver a more affordable housing structure in its district.
 
